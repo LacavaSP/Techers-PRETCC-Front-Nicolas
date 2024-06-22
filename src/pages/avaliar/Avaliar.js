@@ -34,7 +34,7 @@ function Avaliar() {
                 uuid: uniqueId 
             };
             
-            await axios.post("http://localhost:8086/avaliar", dados);
+            await axios.post("http://195.35.37.40:8086/avaliar", dados);
             window.alert("Avaliação enviada com sucesso!");
         } catch (e) {   
             window.alert('ERRO ' + e.response);

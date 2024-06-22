@@ -18,7 +18,7 @@ function Denuncia() {
     useEffect(() => {
         async function fetchDenuncia(){
             try {
-                const response = await axios.get("http://localhost:8086/denuncia/" + uuid)
+                const response = await axios.get("http://195.35.37.40:8086/denuncia/" + uuid)
             
                 setAvaliacao(response.data[0].avaliacao)
                 setFeitaPor(response.data[0].feitaPor)
@@ -48,7 +48,7 @@ function Denuncia() {
         setMostrarConfirmacaoDeEncerrarDenuncia(false);
 
         try{
-            axios.delete("http://localhost:8086/excluirDenuncia/" + uuid)
+            axios.delete("http://195.35.37.40:8086/excluirDenuncia/" + uuid)
         } catch (e){
             window.alert("ERRO")
         }
@@ -58,7 +58,7 @@ function Denuncia() {
 
     function confirmEncerrarAvaliacao(){
         try{
-            axios.delete("http://localhost:8086/excluirAvaliacao/" + avaliacao)
+            axios.delete("http://195.35.37.40:8086/excluirAvaliacao/" + avaliacao)
         } catch (e){
             window.alert("ERRO")
         }
@@ -73,7 +73,7 @@ function Denuncia() {
         setMostrarConfirmacaoDeEncerrarConta(false);
 
         try{
-            axios.delete("http://localhost:8086/excluirUsuario/" + feitaPor)
+            axios.delete("http://195.35.37.40:8086/excluirUsuario/" + feitaPor)
         } catch (e){
             window.alert("Este usuário não existe!")
         }

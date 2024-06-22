@@ -21,7 +21,7 @@ function Avaliacao() {
 
     async function fetchAvaliacao(){
       try {
-        const response = await axios.get("http://localhost:8086/avaliacao/" + uuid)
+        const response = await axios.get("http://195.35.37.40:8086/avaliacao/" + uuid)
     
         setNomeDoJogo(response.data[0].nomeDoJogo);
         setAvaliacao(response.data[0].avaliacao);
@@ -75,7 +75,7 @@ function Avaliacao() {
           uuid: uuidDenuncia
       }
 
-        const response = axios.post("http://localhost:8086/denunciar", dados)
+        const response = axios.post("http://195.35.37.40:8086/denunciar", dados)
         console.log(response.data)
         window.alert("Denuncia enviada com sucesso!")
     } catch {

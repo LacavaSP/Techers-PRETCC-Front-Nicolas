@@ -11,7 +11,7 @@ function Denuncias() {
     async function fetchDenuncias(){
 
         try {
-            const response = await axios.get("http://localhost:8086/denuncias");
+            const response = await axios.get("http://195.35.37.40:8086/denuncias");
             setDenuncias(response.data);
         } catch (e) {
             window.alert("ERRO");

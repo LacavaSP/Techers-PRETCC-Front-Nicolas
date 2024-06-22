@@ -16,7 +16,7 @@ function Login() {
         }
 
         try {
-            const response = await axios.get("http://localhost:8086/usuarios/" + usuario);
+            const response = await axios.get("http://195.35.37.40:8086/usuarios/" + usuario);
             if (response.data.senha === senha) {
                 setUserType(response.data);
                 window.history.pushState({}, '', '/');
